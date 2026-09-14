@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#111827">
+  <title>SoyPerritoProProYT Bed</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="loading">🐶 Cargando SoyPerritoProProYT Bed…</div>
+  <main id="app" hidden>
+    <header class="topbar">
+      <div><b>🐶 SoyPerritoProProYT Bed</b><span id="coords">0, 0, 0</span></div>
+      <div class="top-actions"><button id="skinsBtn">🎨 Skins</button><button id="helpBtn">❔</button></div>
+    </header>
+
+    <section class="game-wrap">
+      <canvas id="game" aria-label="Mundo de SoyPerritoProProYT Bed"></canvas>
+      <div id="crosshair">+</div>
+      <div id="hotbar" class="hotbar"></div>
+      <div id="mobileControls" class="mobile-controls">
+        <div class="dpad"><button data-key="w">▲</button><div><button data-key="a">◀</button><button data-key="s">▼</button><button data-key="d">▶</button></div></div>
+        <div class="actionpad"><button id="jump">⤴</button><button id="break">⛏</button><button id="place">▣</button></div>
+      </div>
+    </section>
+
+    <aside id="skinsPanel" class="panel hidden">
+      <button class="close" data-close="skinsPanel">×</button>
+      <h2>🎨 Mis skins</h2>
+      <div class="skin-card active"><div id="skinPreview" class="skin-preview">🐶</div><div><b>SoyPerrito</b><small>Skin principal</small></div></div>
+      <div class="skin-card"><div class="skin-preview layered">✨</div><div><b>Mi skin 4D</b><small>Modo capas 4D</small></div></div>
+      <label class="import-btn">📥 Importar skin PNG/JPG<input id="skinInput" type="file" accept="image/png,image/jpeg" hidden></label>
+      <p id="skinStatus">Puedes importar una skin y verla en el selector.</p>
+    </aside>
+
+    <aside id="helpPanel" class="panel hidden">
+      <button class="close" data-close="helpPanel">×</button>
+      <h2>🎮 Controles</h2>
+      <p><b>PC:</b> WASD mover · Espacio saltar · clic izquierdo romper · clic derecho colocar.</p>
+      <p><b>Móvil:</b> usa el D-pad y los botones de acción.</p>
+      <p><b>Consola:</b> se detecta Gamepad API cuando el navegador lo permite.</p>
+      <p>Selecciona un bloque en la barra inferior y explora el mundo.</p>
+    </aside>
+
+    <div id="message" class="message"></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
